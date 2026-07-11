@@ -3,8 +3,8 @@ from selenium import webdriver
 driver = webdriver
 import pytest
 
-from Flight_Framework_Mock.pages.login_page import LoginPage
-from Flight_Framework_Mock.utilities import read_excel
+from pages.login_page import LoginPage
+from utilities import read_excel
 
 @pytest.mark.parametrize("username,password", read_excel.get_data())
 
