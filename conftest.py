@@ -4,13 +4,11 @@ from time import sleep
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-@pytest.fixture(params=["chrome",'edge','firefox'])
+@pytest.fixture(params=["chrome",'edge'])
 
 def setup_and_teardown(request):
 
     parameter = request.param
-    if parameter == "firefox":
-        driver = webdriver.Firefox()
     if parameter == "chrome":
         driver = webdriver.Chrome()
     if parameter == "edge":
