@@ -16,7 +16,7 @@ pipeline {
             steps {
                 bat '''
                 if not exist reports mkdir reports
-                "C:\\Program Files\\Python314\\python.exe" -m pytest tests --html=reports/report.html --self-contained-html
+                "C:\\Program Files\\Python314\\python.exe" -m pytest testcases --html=reports/report.html --self-contained-html
                 '''
             }
         }
