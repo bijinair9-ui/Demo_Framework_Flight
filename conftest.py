@@ -16,6 +16,7 @@ def setup_and_teardown(request):
     if parameter == "edge":
         driver = webdriver.Edge()
         options.add_argument("--headless=new")
+        driver = webdriver.Edge(EdgeChromiumDriverManager().install())
 
     driver.implicitly_wait(10)
     driver.get("https://www.ixigo.com/")   #launch ixigo app
