@@ -13,7 +13,7 @@ def setup_and_teardown(request):
     if parameter == "chrome":
         driver = webdriver.Chrome()
     if parameter == "firefox":
-        driver = webdriver.FireFox()
+        driver = webdriver.Firefox()
         
     driver.implicitly_wait(10)
     driver.get("https://www.ixigo.com/")   #launch ixigo app
