@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Run testcases') {
             steps {
                 bat '''
                 if not exist reports mkdir reports
